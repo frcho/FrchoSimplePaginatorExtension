@@ -10,7 +10,7 @@
   </parameters>
 
   <services>
-      <service id="frcho.simple_paginator.adapter_factory" class="%simple_paginator_adapter_factory.class%">
+      <service id="twig.extension.frcho.simple_paginator" public="true" class="%twig.extension.simple_paginator.class%">
       </service>
       <service id="frcho.simple_paginator" class="%simple_paginator.class%" >
           <argument type="service" id="request_stack" />
