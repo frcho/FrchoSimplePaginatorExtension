@@ -5,8 +5,9 @@ parameters:
 services:
     frcho.simple_paginator.adapter_factory:
         class: '%simple_paginator_adapter_factory.class%'
+        public: true       
         
     frcho.simple_paginator:
-        class: '%simple_paginator_adapter_factory.class%'
+        class: '%simple_paginator.class%'
+        public: true             
         arguments: [ "@request_stack", "@frcho.simple_paginator.adapter_factory" ]
-        public: true          

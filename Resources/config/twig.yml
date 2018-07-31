@@ -4,6 +4,7 @@ parameters:
 services:
     twig.extension.frcho.simple_paginator:
         class: '%twig.extension.simple_paginator.class%'
+        public: true             
         arguments: [ "@templating.helper.frcho.simple_paginator" ]
         tags:
             - { name: 'twig.extension', alias: 'simple_paginator_extension' }           

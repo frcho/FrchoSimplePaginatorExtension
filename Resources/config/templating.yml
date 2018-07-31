@@ -4,6 +4,7 @@ parameters:
 services:
     templating.helper.frcho.simple_paginator:
         class: '%templating.helper.simple_paginator.class%'
+        public: true 
         arguments: [ "@service_container" ]
         tags:
             - { name: 'templating.helper', alias: 'simple_paginator_helper' }           
