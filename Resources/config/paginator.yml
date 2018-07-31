@@ -1,0 +1,12 @@
+parameters:
+    simple_paginator_adapter_factory.class:  Frcho\SimplePaginatorBundle\Paginator\Adapter\AdapterFactory
+    simple_paginator.class:  Frcho\SimplePaginatorBundle\Paginator\Paginator
+    
+services:
+    frcho.simple_paginator.adapter_factory:
+        class: '%simple_paginator_adapter_factory.class%'
+        
+    frcho.simple_paginator:
+        class: '%simple_paginator_adapter_factory.class%'
+        arguments: [ "@request_stack", "@frcho.simple_paginator.adapter_factory" ]
+        public: true          

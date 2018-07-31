@@ -1,0 +1,10 @@
+parameters:
+    twig.extension.simple_paginator.class:  Frcho\SimplePaginatorBundle\Twig\Extension\PaginatorExtension
+    
+services:
+    twig.extension.frcho.simple_paginator:
+        class: '%twig.extension.simple_paginator.class%'
+        arguments: [ "@templating.helper.frcho.simple_paginator" ]
+        tags:
+            - { name: 'twig.extension', alias: 'simple_paginator_extension' }           
+          
