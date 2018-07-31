@@ -3,7 +3,7 @@ parameters:
     
 services:
     templating.helper.frcho.simple_paginator:
-        class: '%twig.extension.simple_paginator.class%'
+        class: '%templating.helper.simple_paginator.class%'
         arguments: [ "@service_container" ]
         tags:
             - { name: 'templating.helper', alias: 'simple_paginator_helper' }           
